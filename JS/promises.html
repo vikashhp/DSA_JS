@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Promises
+    <h2 id="post"></h2>
+  </body>
+</html>
+
+<script>
+//   const posts = [
+//     { title: "Post1", body: "This is Post1" },
+//     { title: "Post2", body: "This is Post2" },
+//   ];
+
+//   function getPost() {
+//     setTimeout(() => {
+//       let output = "";
+//       posts.forEach((post) => {
+//         output += `<li>${post.title}</li>`;
+//       });
+//       document.getElementById("post").innerHTML = output;
+//     }, 1000);
+//   }
+
+//   function craetePost(newPost) {
+//     return new Promise((res, rej) => {
+//       setTimeout(() => {
+//         posts.push(newPost);
+//         const err = false;
+
+//         if (!err) {
+//           res();
+//         } else {
+//           rej("Something Went Wrong");
+//         }
+//       }, 2000);
+//     });
+//   }
+
+//   craetePost({ title: "post 3", body: "this is post three" })
+//     .then(getPost)
+//     .catch((err) => console.log(err));
+
+
+
+// Async Await 
+
+    //  async function init(){
+    //     await craetePost({ title: "post 3", body: "this is post three" });
+
+    //     getPost()
+    //  }
+
+    //  init()
+
+    /*
+    this code means the code have to wait  to create post 
+    three and when the third post is created then it it call the getpost 
+*/
+
+
+    //Promise.all
+
+    // const promise1=Promise.resolve('Hello World');
+    // const promise2=10;
+    // const promise3=new Promise((res,rej)=>{
+    //     res('RESOLVED')
+    // })
+
+    // Promise.all([promise1,promise2,promise3]).then((val)=>{
+    //     console.log(val)
+    // })
+
+
+
+
+
+
+
+
+    // Promsie hell
+
+//========== User's Code Starts Here ==========
+// const posts = [{title: 'POST1'},{title: 'POST2'}];
+
+// // Do not touch the following function
+// function printPost() {
+//         posts.forEach((post) => {
+//             console.log(post.title)
+//         })
+// }
+// // Do not touch the following function
+// function create3rdPost() {
+//     return new Promise( (resolve, reject) => {
+//         setTimeout( () => {
+//             posts.push({title: 'POST3'});
+//             resolve()
+//         }, 3000)
+//     }) 
+// }
+// // Do not touch the following function
+// function create4thPost() {
+//     return new Promise( (resolve, reject) => {
+//         setTimeout( () => {
+//             posts.push({title: 'POST4'});
+//             resolve();
+//         }, 2000)
+//     }) 
+// }
+// // Complete the following function 
+// //It should add POST5 to posts array with setTimeout of 1 second
+// function create5thPost(){
+//     //should return a promise
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             posts.push({title:'POST5'});
+//             resolve()
+//         },2000)
+//     })
+  
+// }
+
+// // The following 4 lines need to be fixed too
+// create3rdPost().then(()=>{
+//     create4thPost().then(()=>{
+//         create5thPost().then(()=>{
+//             printPost()
+//         })
+//     })
+// })
+
+
+//========== User's Code Ends Here ==========
+
+
+// setTimeout(()=>{
+//   console.log('a')
+// },2000);
+
+// console.log('b')
+
+// function call(cb){
+//   console.log('a');
+//   callback();
+// }
+
+// call();
+
+// function callback(){
+//   console.log('b')
+// }
+
+// console.log('Start');
+
+// process.nextTick(() => {
+//   console.log('Inside nextTick callback');
+// });
+
+// console.log('End');
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function fun1() {
+  console.log('a');
+  console.log('b');
+
+  await delay(1000);
+  console.log('c');
+
+  await delay(0);
+  console.log('d');
+
+  console.log('e');
+}
+
+fun1();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hoisting</h2>
+</body>
+</html>
+
+<script>
+
+// Q1)
+// console.log(a);//undefined
+// getName()//vikash keshri
+
+
+
+// var a=10;
+// function getName(){
+//     console.log('Vikash Keshri')
+// }
+
+// Q2)
+// console.log(a);//Reference Error
+// getName()//vikash keshri
+
+// let  a=10;
+// function getName(){
+//     console.log('Vikash Keshri')
+// }
+
+//because in case of let it is in the diffrent memory location and it is in the temporal dead zone
+
+// console.log(a);
+
+// console.log(getName);
+//Refereence error that getname is not defined
+
+// var a=20;
+// const getname=()=>{
+//     console.log('vikash keshri')
+// }
+
+// becasue it act like a varriable in case of arrow function,
+//it allocates undefined in the global memory
+
+// getName();//Reference error get name before initilization
+
+// const getName=function (){
+//     console.log('vikash keshri')
+// }
+
+
+/*
+what is hoisting ?
+Ans-When we want to access variable and function
+ before initilization then the js engine allocates
+the memory to each variable and function so that we 
+can assess it even before we initialized it but it 
+behaves different in different cases in case of variable 
+it gives undefined but in case of normal function declaration 
+it gives the function itself but in case of arrow function 
+it act like a variable and assigned undefined in the memory 
+but when we try to access it, it gives us the eror
+
+*/
+
+
+
+
+
+</script>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Callback</h1>
+    <h2 id="post"></h2>
+  </body>
+</html>
+
+<script>
+  // console.log('a');
+
+  // setTimeout(()=>{
+  // console.log('chunnu')
+  // },7000)
+
+  // console.log('b')
+
+  // console.log('a');
+
+  // function x(y){
+  //     console.log(y)
+  // }
+
+  // x(function(){
+  //     console.log('vhvhv')
+  // })
+
+  // console.log('v')
+
+  /*
+
+Js only has one call stack and it is a synchronous language so that it executes line by line 
+if we write some heavy function  that takes time to execute then the main thread of js blocks
+all the other code after that so that we have to use the concept of call backs and async function
+if we put some heavy function inside a set timeout or in a async operation then it will go to the 
+web api which is in the browser and when all our synchronous code runs then after that the async code 
+come to the callback queue and the event loop check that is there any code present in the callback queue 
+and if it is present then  event loop will provide that code inside the callstack to execute  and it will 
+executes after that.
+*/
+
+//   const posts = [
+//     { title: "Post1", body: "This is Post1" },
+//     { title: "Post2", body: "This is Post2" },
+//   ];
+
+//   function getPost() {
+//     setTimeout(() => {
+//       let output = "";
+//       posts.forEach((post) => {
+//         output += `<li>${post.title}</li>`;
+//       });
+//       document.getElementById("post").innerHTML = output;
+//     }, 1000);
+//   }
+
+
+//   function craetePost(newPost,callback){
+//     setTimeout(()=>{
+//        posts.push(newPost)
+//        callback()
+//     },2000)
+//   }
+
+
+//   craetePost({title:'Post 3',body:'this is Post three' },  getPost)
+
+  /*
+  When my third post is created then the call back call the getPost and show all my post on to the screen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

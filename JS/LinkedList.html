@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>LinkedList</h1>
+  </body>
+</html>
+
+<script>
+//Insertion of a node from different points
+  class Node {
+    constructor(a) {
+      this.value = a;
+      this.next = undefined;
+    }
+  }
+
+  insertion_start = function (head, value) {
+    new_Node = new Node(value);
+    new_Node.next = head;
+    return new_Node;
+  };
+  display = function (head) {
+    temp = head;
+    while (temp != null) {
+      console.log(temp.value);
+      temp = temp.next;
+    }
+  };
+
+  insertion_end = function (head, value) {
+    new_Node = new Node(value);
+    temp = head;
+    while (temp.next != null) {
+      temp = temp.next;
+    }
+    temp.next = new_Node;
+  };
+  insertion_Middle = function (head, n, value) {
+    new_Node = new Node(value);
+    temp = head;
+    while (n - 1 > 0) {
+      temp = temp.next;
+      n = n - 1;
+    }
+    x = temp.next;
+    temp.next = new_Node;
+    new_Node.next = x;
+  };
+
+  deletion_in_end=function(head){
+    temp=head;
+    while(temp.next.next!=null){
+      temp=temp.next
+    }
+    temp.next=null
+
+  }
+
+  deletion_in_nth_node=function (head,n){
+      temp=head;
+      while(n-2!=0){
+        temp=temp.next;
+        n=n-1
+      }
+      temp.next=temp.next.next;
+  }
+
+
+
+  head = new Node(5);
+ 
+
+  head = insertion_start(head, 10);
+  // console.log(head)
+  insertion_end(head, 20);
+  insertion_end(head, 30);
+  insertion_Middle(head, 2, 100);
+  deletion_in_nth_node(head,2)
+  
+  deletion_in_end(head)
+  display(head);
+    //Deletion of node from different points
+
+  // deleting from starting
+  // head=head.next;
+  // display(head);//the staring point that is 10 will be removed from the node 
+
+ 
+
+  // console.log(head)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</script>
